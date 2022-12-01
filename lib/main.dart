@@ -10,9 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Expenses App',
-      home: MyHomePage(),
+    return MaterialApp(
+      title: 'Personal Expenses App',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)
+            .copyWith(secondary: Colors.amber),
+      ),
+      home: const MyHomePage(),
     );
   }
 }
