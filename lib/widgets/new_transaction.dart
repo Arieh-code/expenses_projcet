@@ -1,11 +1,9 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class NewTransaction extends StatefulWidget {
   final Function addTx;
 
-  NewTransaction(this.addTx, {super.key});
+  const NewTransaction(this.addTx, {super.key});
 
   @override
   _NewTransactionState createState() => _NewTransactionState();
@@ -26,6 +24,8 @@ class _NewTransactionState extends State<NewTransaction> {
       enteredTitle,
       enterAmount,
     );
+
+    Navigator.of(context).pop();
   }
 
   @override
